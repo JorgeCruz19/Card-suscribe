@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   font-family: "Muli", sans-serif;
+   font-size: 16px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+}
+.suscribe-widget {
+   margin: 0 auto;
+   max-width: 350px;
+   height: auto;
+   box-shadow: 0 9px 25px 0 rgba(132, 128, 177, 0.28);
+   border-radius: 15px;
+}
+.widget-top {
+   width: 100%;
+   height: auto;
+   padding: 60px 30px 45px 30px;
+   color: white;
+   background: url("../img/subscribe-widget-bg.svg") no-repeat center,
+      linear-gradient(90deg, #f073c8 0%, #ff7a95 99%);
+   border-radius: 15px 15px 0 0;
+   text-align: center;
+   position: relative;
+}
+.close-btn {
+   position: absolute;
+   top: 15px;
+   right: 15px;
+   width: 40px;
+   height: 40px;
+   background: #f7f7fc;
+   border-radius: 25px;
+   cursor: pointer;
+}
+.close-btn::after {
+   width: 40px;
+   height: 40px;
+   content: "";
+   background: url("../img/close-icon-dark.svg") no-repeat center;
+   opacity: 0.5;
+   position: absolute;
+   left: 0;
+   top: 0;
+   transition: opacity 0.3s ease-in-out;
+}
+.close-btn.active::after,
+.close-btn:hover::after {
+   opacity: 1;
+}
+.close-btn.white {
+   background: transparent;
+}
+.close-btn.white::after {
+   background: url("../img/close-icon-light.svg") no-repeat center;
+}
+.suscribe-error-message {
+   font-size: 10px;
+   margin-bottom: 10px;
+   text-align: left;
+   border-radius: 25px;
+   background-color: white;
+   color: #f775c1;
+   padding: 3px 10px;
+   position: absolute;
+   left: 50%;
+   top: 20px;
+   transform: translateX(-50%);
+   opacity: 0;
+}
+
+.widget-top p {
+   margin-bottom: 20px;
+   font-size: 12px;
+   text-transform: uppercase;
+}
+.widget-top h2 {
+   font-size: 22px;
+   font-weight: bold;
+}
+.widget-bottom {
+   width: 100%;
+   padding: 30px 30px 40px;
+   border-radius: 0 0 15px 15px;
+   background-color: white;
+}
+.border-input {
+   width: 100%;
+   border: 1px solid #ebebf2;
+   border-radius: 5px;
+   padding: 11px 15px;
+   margin-bottom: 15px;
+   background-color: white;
+   outline: none;
+   line-height: normal;
+   -webkit-appearance: none;
+   appearance: none;
+   transition: 0.3s border ease-in-out;
+}
+.border-input:hover,
+.border-input:focus {
+   border: 1px solid #f775c1;
+}
+.pink-btn {
+   padding: 15px;
+   background: linear-gradient(90deg, #f073c8 0%, #ff6a95 99%);
+   color: white;
+   border-radius: 5px;
+   font-size: 14px;
+   font-weight: bold;
+   width: 100%;
+   cursor: pointer;
+   text-align: center;
+   transition: all 0.3s ease-in-out;
+   box-shadow: 0 12px 12px -11px rgba(240, 115, 200, 0.73);
+   background-size: 200% auto;
+   border: none;
+   outline: none;
+}
+.pink-btn:hover {
+   background-position: right center;
+   box-shadow: 0 12px 20px -11px rgba(255, 106, 149, 0.72);
+}
+
+.widget-bottom p {
+   margin: 35px auto 30px;
+   text-align: center;
+   font-size: 14px;
+   color: #7d7a9e;
+}
+.social-btn-wrapper {
+   display: block;
+   margin: auto;
+   text-align: center;
+}
+.so-btn {
+   padding: 25px 35px;
+   border-radius: 5px;
+   border: 1px solid white;
+   display: inline-block;
+   margin: 0 8px;
+   cursor: pointer;
+   transition: border 0.3s ease-in-out;
+}
+.so-btn:hover {
+   border: 1px solid #ebebf2;
+}
+.so-btn.google {
+   background: url("../img/g-icon.svg") no-repeat center;
+}
+.so-btn.facebook {
+   background: url("../img/f-icon.svg") no-repeat center;
+}
+.so-btn.twitter {
+   background: url("../img/t-icon.svg") no-repeat center;
+}
